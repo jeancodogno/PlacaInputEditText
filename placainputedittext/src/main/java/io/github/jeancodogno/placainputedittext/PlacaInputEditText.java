@@ -82,7 +82,7 @@ public class PlacaInputEditText extends TextInputEditText {
                     padded += " ";
 
                 String letters = padded.substring(0, 3);
-                String numbers = padded.substring(3, 7);
+                String numbers = padded.substring(3, 7).replaceAll("[A-Z]", "");
                 String plate = letters+"-"+numbers;
 
                 PlacaInputEditText.this.isUpdating = true;
